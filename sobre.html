@@ -1,0 +1,473 @@
+<html lang="pt-br">
+  <head>
+    <title>sobre • leo [et al.]</title>
+    <link
+      rel="icon"
+      href="https://leonardocosta.neocities.org/imagens/computer-old.png"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="leo [et al.]" />
+    <meta property="og:title" content="sobre • leo [et al.]" />
+    <meta name="description" content="amador profissional" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="leo-etal.github.io" />
+    <meta
+      property="og:image"
+      content="https://leonardocosta.neocities.org/imagens/computer-old.png"
+    />
+    <meta property="og:site_name" content="sobre • leo [et al.]" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="sobre • leo [et al.]" />
+    <meta
+      name="twitter:image"
+      content="https://leonardocosta.neocities.org/imagens/computer-old.png"
+    />
+    <style>
+    * { margin: 0; padding: 0; box-sizing: border-box;
+  
+  /* Color scheme */
+  
+  --textcolor: #3D5D86;
+  --bgcolor: #E8D5C1;
+  --highlight: #ffffff;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    --textcolor: #3D5D86;
+    --bgcolor: #E8D5C1;
+    --highlight: #ffffff;
+  }
+}
+
+body {
+  font-size: 18px;
+  font-family: Georgia;
+  line-height: 1.4;
+  color: #3D5D86;
+  background: #E8D5C1;
+  max-width: 38em;
+  margin: 7vw auto;
+  padding: 3em;
+}
+
+/* ------- Sections ------- */
+
+section {
+  padding: calc(6em + 5vw) 5vw 8vw 5vw;
+  /* ! Everything below is needed ! */
+  display: none;
+  position: absolute;
+  top: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--bgcolor);
+}
+
+section:target { /* Show section */
+  display: block;
+}
+
+section#home { /* Show #home by default */
+  display: show;
+}
+
+/* ------- Header ------- */
+
+header {
+  padding: 5vw 5vw 0 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+header h1 {
+  font-size: 1em;
+  flex: 1; /* pushes nav to the right */
+  white-space: nowrap;
+  padding: 0 5vw .5em 0;
+}
+
+nav a:not(:last-of-type) {
+  margin-right: 1.5vw;
+}
+
+/* ------- General ------- */
+
+a {
+  text-decoration: underline;
+  color: #3D5D86;
+}
+
+a:hover {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+section h1 {
+  font-size: 1em;
+  margin: 0 0 1em 0;
+}
+
+h2, h3, h4 {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 1.6em 0 .6em 0;
+}
+
+p, ul, ol, article {
+  max-width: 60ch; /* Limit line-length to 60 characters */
+  margin-bottom: .6em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li::marker {
+  content: "\2022   ";
+}
+
+li {
+  margin-bottom: .2em;
+}
+
+ul, ol {
+  padding-left: 2ch;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+small {
+  font-size: .85em;
+}
+
+hr {
+  color: #3D5D86;
+  background-color: #3D5D86;
+  padding: 0;
+  border-top: 1px solid,
+}
+
+abbr {
+  text-decoration: none;
+}
+
+abbr[title]:hover {
+  opacity: .7;
+  cursor: help;
+}
+
+blockquote {
+  padding-left: 2ch;
+  opacity: .7;
+  margin-bottom: .6em;
+  position: relative;
+}
+
+blockquote:before {
+  content: "";
+  position:absolute;
+  left: 0;
+  top: .3em;
+  bottom: .3em;
+  background: currentColor;
+  width: 1px;
+  opacity: .2;
+}
+
+img {
+  border: 1px solid #3D5D86;
+} 
+      
+      
+svg, video, audio {
+  display: block;
+  max-width: 70em;
+  height: auto;
+  fill: currentColor;
+}
+  
+code, textarea {
+  font-family: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
+  font-size: 1em;
+  opacity: .7;
+}
+
+a code {
+  opacity:1;
+}
+
+pre, textarea { /* for code samples */
+  font-size: .9em;
+  color: inherit;
+  line-height:inherit;
+  padding:.6em .9em;
+  margin: .8em 0 1em 0;
+  position: relative;
+  display: block;
+  width: 100%;
+  white-space: pre;
+  border:0;
+  border-radius: 4px;
+  background:rgba(255,255,100,.075);
+  box-shadow: inset 1px 1px 0 rgba(0,0,0,.2), inset -1px -1px 0 rgba(0,0,0,.04) ;
+}
+
+/* Inline footnotes */
+
+label {
+  cursor: pointer;
+  vertical-align: super;
+  line-height: 1;
+  font-size: .75em;
+  padding-left: .1em;
+}
+
+label:hover {
+  color: var(--highlight);
+}
+
+label:before {content:"[";}
+label:after {content:"]";}
+
+label + input,
+label + input + small {
+  display: none;
+}
+
+input:checked + small {
+  display: block;
+  padding: .8em 0 1em 2.5vw;;
+}
+
+/* Figures */
+
+figure {
+  margin: 2em 0 1.5em 0;
+}
+
+figure figcaption {
+  margin: 0.8em 0 0 0;
+  font-size: .85em;
+  opacity: .7;
+}
+
+/* Responsive video embeds */
+
+figure.video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+figure.video iframe, figure.video object, figure.video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  visibility: hidden; /* so loading="lazy" should work? */
+}
+
+section:target iframe {
+  visibility: visible;
+}
+
+/* ------- News ------- */
+
+article + article {
+  margin-top: 4.5em;
+}
+
+article h2 {
+  font-weight: 700;
+  margin: 0 0 1em 0;
+}
+
+article time {
+  margin-left: .6em;
+  font-size: .8em;
+  font-weight: 400;
+  opacity: .7;
+}
+
+/* ------- Images Grid ------- */
+
+.grid {
+  display: grid;
+  grid-gap: 5vmin;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 150px = minimum image size */
+  grid-auto-flow: dense;
+  padding: 2em 0;
+}
+
+.grid a {
+  position: relative;
+  border: 0;
+}
+
+.grid a:hover {
+  transform: scale(.975);
+}
+
+/* For a square ratio */
+.grid a:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.grid a img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/* ------- Lightbox ------- */
+
+.lightbox {
+  display: none;
+  color: var(--textcolor);
+}
+
+.lightbox:target {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  background: var(--bgcolor);
+  border: 0;
+  z-index: 3;
+}
+
+.lightbox img {
+  max-height: 100vh;
+  z-index: 4;
+}
+
+.lightbox:target:before { /* Loading spinner */
+  content:"";
+  height: 2em;
+  width: 2em;
+  animation: spin .8s infinite linear;
+  border: 1px solid;
+  border-right-color: transparent;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  transform: translateX(-50%);
+  opacity: .25;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.lightbox:target:after { /* Ã— to close */
+  content: "\00D7";
+  position: fixed;
+  font-size: 2em;
+  font-weight: 200;
+  line-height: 0;
+  top: .75em;
+  right: .5em;
+  z-index: 4;
+}
+
+/* ------- Smaller screens ------- */
+
+@media only screen and (max-width: 680px) {
+  body { font-size: 16px; }
+}
+
+@media only screen and (max-width: 540px) {
+  nav { width: 100%; } /* Fix for older webkit versions */
+}
+      
+}
+    </style>
+    </head>
+<body>
+  <h2>leo [et al.]</h2><br>
+         <nav>
+     <a href="https://leo-etal.github.io/sobre/">sobre</a>&nbsp;
+      <a href="https://etal.home.blog">blog</a>&nbsp;   
+     <a href="https://read.cv/leonardovdcosta">cv</a>
+      </nav>
+ <p><br><br><br><br></p>
+     
+    <div><h1>sobre</h1><hr>
+      <p><br><br></p>
+      <p>meu nome é leonardo, nasci em 1986 em santo andré, e desde 2011 vivo na cidade de são paulo.</p>
+      <p>trabalho no acervo de uma biblioteca digital, e interesso-me por diversos assuntos. defendo uma internet mais segura, sem algorítimos controlando nossas relações, gostos e decisões. sou entusiasta do "faça-você-mesmo", então apoio a pesquisa independente, a educação informal e a democratização da informação e do conhecimento.</p>
+      <p>para falar comigo, basta escrever um <a target="_blank" href="mailto:leonardovcosta@proton.me">e-mail</a>.</p>
+      <p><br></p>
+      <img src="https://leonardocosta.neocities.org/imagens/dither_it_m2.jpg" style="width: 50%"/>
+      <p><br><br><br><br></p>
+     
+    <div><h1>o que tenho feito</h1><hr>
+      <p><br><br></p>
+<p>
+   <dl>
+      <dt><p style="font-weight:bold">Fones de ouvido</p></dt>
+      <dd><details><summary>Ballroom dance scene - Horsegirl</summary><p><div class="embed-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/qr_oViYr_1s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </p></details></dd>
+      <dd><details><summary>Ideas of space - Tess Roby</summary><p><div class="embed-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/4GTtFMoIFNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></p></details></dd>
+      <dd><details><summary>Passion babe - Aldous Harding</summary><p><div class="embed-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/PhtSxHJ88fY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></p></details></dd>
+      </dl><br>
+<dl>
+      <dt><p style="font-weight:bold">Cabeceira</p></dt>
+      <dd><details><summary>Ficção</summary><p>Comecei <a href="https://todavialivros.com.br/livros/a-estrangeira">A estrangeira</a>, da Claudia Durastanti, mas tive que abandoná-lo devido às atividades voltadas para a especialização que estou fazendo. Espero voltar ao livro em breve, porque gosto do gênero contemporâneo "meio ensaio meio biografia" que a autora utiliza.</p></details></dd>
+      <dd><details><summary>Não-ficção</summary><p>Sigo com a leitura (lenta) do <a href="https://dublinense.com.br/livros/atlas-do-corpo-e-da-imaginacao/">Atlas do corpo e da imaginação</a>, do Gonçalo M. Tavares. Ainda estou no início, mas já me sinto inspirado pelo conteúdo textual e pelas obras do coletivo de artistas plástico <a href="https://www.instagram.com/os_espacialistas/">Os Espacialistas</a>, que ajudam a construir os caminhos do livro. Talvez este seja o primeiro atlas que lerei do começo ao fim.</p></details></dd>
+      </dl><br>
+      <dl>
+      <dt><p style="font-weight:bold">Olhares & perspectivas</p></dt>
+      <dd><details><summary>Série</summary><p>Reassistindo <a href="http://www.btvsonline.com/wp-content/uploads/2012/04/buffy-meme.jpg">Buffy</a>, em parte pelo saudosismo da juventude, quando éramos mais estúpidos e felizes, em parte por apresentar o universo da série para o meu companheiro. Estamos na <a href="https://buffy.fandom.com/pt-br/wiki/Buffy,_a_Ca%C3%A7a-Vampiros_Wiki">primeira</a> temporada, então muitos acontecimentos ainda nos aguardam...</p></details></dd>
+      <dd><details><summary>Filmes</summary><p>Passando pela fase "preto & branco são superiores que os coloridos, e eu posso provar"; revendo alguns títulos, enquanto completo a lista de alguns diretores (sim, <a href="https://pt.wikipedia.org/wiki/Alfred_Hitchcock">Hitchcock</a>, estou olhando para você). Os últimos cinco foram:</p> 
+      <div style="overflow-x: scroll">
+      <div class="content-container" style="display: inline-flex; width:100%; align-items: center">
+      <a href="https://www.imdb.com/title/tt0054167/" title="IMDB · A tortura do medo"> <img src="https://m.media-amazon.com/images/M/MV5BZjM3ZTAzZDYtZmFjZS00YmQ1LWJlOWEtN2I4MDRmYzY5YmRlL2ltYWdlXkEyXkFqcGdeQXVyMjgyNjk3MzE@._V1_.jpg"  alt="Peeping Tom" width="204" height="300"></a>
+      <a href="https://www.imdb.com/title/tt0034248/" title="IMDB · Suspeita"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Suspicion_(1941_poster).jpg/676px-Suspicion_(1941_poster).jpg"  alt="Suspicion" width="204" height="300"></a>
+      <a href="https://www.imdb.com/title/tt0055597/" title="IMDB · Meu passado me condena"> <img src="https://pics.filmaffinity.com/Victim-896450258-large.jpg"  alt="Victim" width="204" height="300"></a>
+      <a href="https://www.imdb.com/title/tt0033045/" title="IMDB · A loja da esquina"> <img src="https://i.imgur.com/xHP1Jd9.jpeg"  alt="A loja da esquina" width="204" height="300"></a>
+      <a href="https://www.imdb.com/title/tt0040872/" title="IMDB · Amarga esperança"> <img src="https://cps-static.rovicorp.com/2/Open/1SPS/VT/AMG/_derived_jpg_q90_310x470_m0/53394_PA_They%20Live%20by%20Night_1.jpg"  alt="Amarga esperança" width="204" height="300"></a>
+      </div></div>
+      </details></dd></dl><br>
+    <dl>
+      <dt><p style="font-weight:bold">Pesquisas</p></dt>
+      <dd><details><summary>HTML</summary><p>Tentando me empenhar no HTML, considerando em usá-lo de maneira mais criativa para elaborar sites de projetos que estou envolvido, me inspirando em <a href="http://html.energy/home.html">html energy</a> e seus encontros de freewriting, além das descobertas feitas através do <a href="https://wiby.me">wiby.me</a>.</p></details></dd>
+      <dd><details><summary>tempo e espaço no zen budismo</summary><p>Voltando-me para leituras introdutórias sobre zen budismo em conexão com a filosofia japonesa, em particular as noções de tempo e espaço na literatura, a fim de compreender melhor suas relações com a experiência estética.</p></details></dd>
+      <dd><details><summary>ilustração naturalista</summary><p>Pensando em maneiras de me envolver mais com a observação naturalista, especialmente plantas, pássaros e nuvens; investigando métodos para catalogá-los baseados em suas características específicas (cabe aqui o sonho de aprender a desenhar).</p></details></dd>
+      </dl>      
+      </p>
+        </div>
+       <h1>&nbsp;⁕&nbsp;</h1>
+  <p><br><br></p>
+             <footer>
+            <small><p>
+              <a href="https://leo-etal.github.io">voltar</a><br>
+              </p></small>
+          </footer>
+</body>
+</html>
